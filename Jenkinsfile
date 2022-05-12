@@ -11,7 +11,7 @@ pipeline {
                 }
             }
             steps {
-                echo ${currentBuild.number}
+                echo "${currentBuild.number}"
             }
         }
     }
