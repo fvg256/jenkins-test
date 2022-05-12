@@ -12,7 +12,8 @@ pipeline {
             }
             steps {
                 echo "${currentBuild.number}"
-                ehco filetest > ../filtest
+                cat ../filetest
+                // ehco filetest > ../filtest
             }
         }
     }
