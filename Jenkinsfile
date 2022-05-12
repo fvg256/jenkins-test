@@ -5,11 +5,6 @@ pipeline {
     agent any
     stages {
         stage("build") {
-            when {
-                expression {
-                    env.GIT_COMMIT != env.GIT_PREVIOUS_SUCCESSFUL_COMMIT
-                }
-            }
             steps {
                 echo "${currentBuild.number}"
                 echo "8"
