@@ -1,4 +1,3 @@
-def ECR_URL = "739778483331.dkr.ecr.ap-northeast-2.amazonaws.com/trust-web"
 def PROFILE = "dev"
 
 pipeline {
