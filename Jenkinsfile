@@ -12,6 +12,7 @@ pipeline {
             }
             steps {
                 echo "${currentBuild.number}"
+                echo "8"
                 sh "ehco filetest > ../filtest"
                 sh "cat ../filtest"
             }
