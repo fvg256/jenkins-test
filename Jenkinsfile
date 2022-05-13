@@ -4,13 +4,14 @@ def VERSIONING = "PATCH"
 pipeline {
     agent any
     parameters {
-        choice(name: "CATEGORY", choices: ["FEATURE", "PATCH"])
+        choice(name: "CATEGORY", choices: ["patch", "feature"])
     }
     stages {
         stage("build") {
             steps {
                 echo "choice: ${params.CATEGORY}"
                 echo VERSIONING
+                git
             }
         }
     }
