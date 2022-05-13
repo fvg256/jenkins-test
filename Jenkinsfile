@@ -9,6 +9,8 @@ pipeline {
     stages {
         stage("build") {
             steps {
+                echo env.GIT_COMMIT
+                echo env.GIT_PREVIOUS_SUCCESSFUL_COMMIT
                 echo "choice: ${params.CATEGORY}"
                 echo VERSIONING
                 echo BRANCH_NAME
