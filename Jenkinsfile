@@ -1,14 +1,16 @@
 def PROFILE = "dev"
+def VERSIONING = "PATCH"
 
 pipeline {
     agent any
     parameters {
-        choice(name: "CHOICE", choices: ['One', 'Two', 'Three'])
+        choice(name: "CATEGORY", choices: ["FEATURE", "PATCH"])
     }
     stages {
         stage("build") {
             steps {
-                echo "choice: ${params.CHOICE}"
+                echo "choice: ${params.CATEGORY}"
+                echo VERSIONING
             }
         }
     }
