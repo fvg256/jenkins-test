@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo "choice: ${params.CATEGORY}"
                 echo VERSIONING
-                git
+                sh "git"
             }
         }
     }
