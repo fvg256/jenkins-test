@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                ehco "choice: ${params.CHOICE}"
+                echo "choice: ${params.CHOICE}"
             }
         }
     }
