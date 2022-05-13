@@ -12,6 +12,7 @@ pipeline {
                 echo "choice: ${params.CATEGORY}"
                 echo VERSIONING
                 sh "git remote -v"
+                sh "npm"
             }
         }
     }
