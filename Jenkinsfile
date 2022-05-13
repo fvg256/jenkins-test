@@ -2,12 +2,13 @@ def PROFILE = "dev"
 
 pipeline {
     agent any
+    parameters {
+        choice(name: "CHOICE", choices: ['One', 'Two', 'Three'])
+    }
     stages {
         stage("build") {
             steps {
-                echo "${currentBuild.number}"
-                // sh "echo filetest > ../filtest"
-                sh "cat ../filtest"
+                ehco "choice: ${params.CHOICE}"
             }
         }
     }
