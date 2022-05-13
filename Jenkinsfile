@@ -11,8 +11,8 @@ pipeline {
             steps {
                 echo "choice: ${params.CATEGORY}"
                 echo VERSIONING
-                sh "git remote -v"
-                sh "npm"
+                echo BRANCH_NAME
+                echo TAG_NAME
             }
         }
     }
