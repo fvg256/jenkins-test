@@ -12,7 +12,7 @@ pipeline {
                 echo "choice: ${params.CATEGORY}"
                 echo VERSIONING
                 echo BRANCH_NAME
-                echo TAG_NAME
+                sh "git tag"
             }
         }
     }
