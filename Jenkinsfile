@@ -12,7 +12,7 @@ pipeline {
                 echo env.GIT_COMMIT
                 echo env.GIT_PREVIOUS_SUCCESSFUL_COMMIT
                 echo "choice: ${params.CATEGORY}"
-                sh "git tag"
+                sh "git tag --contains ${env.GIT_COMMIT}"
                 echo VERSIONING
                 echo BRANCH_NAME
                 echo env.TAG_NAME
