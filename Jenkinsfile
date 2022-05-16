@@ -9,13 +9,16 @@ pipeline {
     stages {
         stage("build") {
             steps {
+                    TAG = sh (
+                    returnStdout: true,
+                    script: "git tag --contains ${env.GIT_COMMIT}"
+                ).trim()
                 echo env.GIT_COMMIT
                 echo env.GIT_PREVIOUS_SUCCESSFUL_COMMIT
                 echo "choice: ${params.CATEGORY}"
-                echo "git tag --contains ${env.GIT_COMMIT}"
                 echo VERSIONING
                 echo BRANCH_NAME
-                echo env.TAG_NAME
+                echo TAG
             }
         }
     }
